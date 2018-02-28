@@ -12,6 +12,11 @@ namespace POODiurno
         public string NISS { get; set; }
         public string Nome { get; set; }
         public Categoria Categoria { get; set; }
+        public override string ToString()
+        {
+            
+            return $"F: {Nome} {NIF} é {Categoria.Descricao} com vencimento base {Categoria.VencimentoBase:0.00} euros";
+        }
     }
 
     

@@ -13,7 +13,7 @@ namespace POODiurno
             Cliente cli = new Cliente();
             cli.DenominacaoSocial = "Ismai";
             cli.NIF = "123456789";
-            Contactos prof = new Contactos();
+            Contacto prof = new Contacto();
             prof.Nome = "Jose Lapa";
             prof.CargoDesempenhado = "Aluno";
             cli.Contactos.Add(prof);
@@ -27,19 +27,19 @@ namespace POODiurno
 
             Funcionario f = new Funcionario { NIF = "123", NISS = "123",
                 Nome = "Funcionario 1", Categoria = categorias[0], };
-            cli.Funcionario.Add(f);
+            cli.Funcionarios.Add(f);
                 
 
             Console.Out.WriteLine("    ***Cliente***    ");
-            Console.WriteLine($"NOME: {cli.DenominacaoSocial}");
+            /**Console.WriteLine($"NOME: {cli.DenominacaoSocial}");
             Console.WriteLine($"NIF: { cli.NIF}");
             Console.WriteLine("    ***contactos***    ");
             foreach(Contactos c in cli.Contactos)
             {
                 Console.WriteLine($"    {c.Nome} é {c.CargoDesempenhado}");
-            }
+            }*/
 
-
+            Console.Out.WriteLine(cli);
 
         }
     }
