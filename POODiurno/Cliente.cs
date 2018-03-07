@@ -35,6 +35,14 @@ namespace POODiurno
             };
             sb.AppendLine();
             sb.Append("\t*** FUNCIONÁRIOS***");
+            sb.AppendLine();
+            foreach(var funcionario in Funcionarios)
+            {
+                sb.Append($"\t{funcionario}");
+            }
+
+            return sb.ToString();
+        }
         
         }
             

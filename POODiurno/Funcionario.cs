@@ -15,9 +15,11 @@ namespace POODiurno
         public override string ToString()
         {
             
-            return $"F: {Nome} {NIF} é {Categoria.Descricao} com vencimento base {Categoria.VencimentoBase:0.00} euros";
+            return $"F: {Nome} ({NIF}) é {Categoria.Descricao} com vencimento base {Categoria.VencimentoBase:0.00} euros";
+        }
+        public DateTime DataNascimento { get; set; }
+        public bool IsMesAniversario 
+            => DataNascimento.Month == DateTime.Now.Month;
+            
         }
     }
-
-    
-}
